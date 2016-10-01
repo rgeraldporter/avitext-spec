@@ -61,7 +61,6 @@ BAEA 1 "flyover" 1i "2nd year immature"
 CEDW 160 "min count, largest flock I've seen since 2013"
 RBGU 150 "large flock on ice, est"
 CAGO 227 25 305 "flyovers headed west, exact"
-MALL 1d "found lying on ice"
 BLJA 1
 PIWA x "newly excavated nesting cavity found"
 EABL "not found"
@@ -97,7 +96,7 @@ This translates as follows:
  - `1.2km` refers to distance covered. Add "k" or "km" for kilometres, without this it will be assumed as miles (optional; will post to eBird as "stationary" if not included. Cannot be added if time observing is not added.)
 
 <div id='Species'/>
-### Lines 3+: Observed Species Line
+### Lines 3+: Observed Species Lines
 
 These lines follow the format of noting first the species in a 4-character banding code, followed by a space, and then as many comments or counts of individuals as necessary (each seperated by a space).
 
@@ -106,7 +105,7 @@ This is best understood by using the example to explain:
 `BCCH 1 6 2m "males singing"`
 >This refers to a Black-capped Chickadee (`BCCH`), in which 9 individuals were observed. One was observed earlier, probably alone, then six more were seen, and finally two more males (`2m`) were heard singing that were not already observed. 
 >
->When this part of the list is run through the parser, it tabulates the full total so you will not need to do math in the field, nor will you need to delete and replace numbers!
+>When this part of the list is run through the parser, it tabulates the full total so you will not need to do math in the field.
 
 ---
 `BLJA 5`
@@ -150,10 +149,6 @@ This is best understood by using the example to explain:
 >Another Blue Jay was found, the author forgot it was already on the list. No worries though, this should just be added to the count for this species.
 
 ---
-`MALL 1d "found lying on ice"`
->A deceased Mallard was found.
-
----
 `PIWA x "new nesting cavity found"`
 >A new Pileated Woodpecker nesting cavity was found, but no Pileated Woodpeckers were directly observed.
 
@@ -161,7 +156,7 @@ This is best understood by using the example to explain:
 `EABL "not found at known feeding spot"`
 >No Eastern Bluebirds were found. 
 
->*(\*Normally an observer would not include what they didn't see, but this may be relevant if the purpose of the outing was to find this species. eBird does indeed accept zero-counts for this purpose, and the zero count will not cause alerts or appear as a result in species searches.)*
+>*(***Normally an observer would not include what they didn't see, but this may be relevant if the purpose of the outing was to find this species. eBird does indeed accept zero-counts for this purpose, and the zero count will not cause alerts or appear as a result in species searches.)*
 
 <div id='Valid-Short-Count-Codes'/>
 ### Valid Short-codes
@@ -173,7 +168,6 @@ This is best understood by using the example to explain:
 | `j`  | Juvenile | Still in nest or otherwise dependant on parent |
 | `i`  | Immature | Not yet in adult plumage, but independant |
 | `a`  | Adult | Only necessary if sex is unknown and needs to be differentiated with sub-adults|
-| `d`  | Dead | Used to denote a dead bird found (use comments to describe sex and age if need be)|
 | `x`  | Check* | Used to denote occurrance where numbers unknown or not relevant to the observation. This `x` must be without any numerical prefix.
 
 
@@ -258,7 +252,7 @@ If you choose you may string together male and female counts with single letters
 
 #### ➤ Other short codes can be strung together for an individual or group
 
-This will likely not happen often, but you may choose to denote that two birds are both "male and immature", or "female, adult, and dead". These cases **must** be prefixed with a digit for a count though, e.g. `2mi` or `1daf`.
+This will likely not happen often, but you may choose to denote that two birds are both "male and immature", or "female and adult". These cases **must** be prefixed with a digit for a count though, e.g. `2mi` or `1af`.
 
 ### Advanced Example
 
@@ -276,7 +270,6 @@ CEDW 160 "min count, largest flock I've seen since 2013"
 RBGU 150 large flock on ice, est
 CAGO 227 25 305 flyovers headed west, exact
 UNSP 2
-MALL 1d found lying on ice
 PIWA x newly excavated nesting cavity found
 [finch sp.] 2
 EABL not found
