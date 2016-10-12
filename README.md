@@ -27,7 +27,7 @@
 <div id='Introduction'/>
 ## Introduction
 
-**Avitext** is a plain text file format specification for bird species observations in the [ABA region](http://listing.aba.org/descriptions/). It is designed to document checklists in the field as quickly as possible using a smartphone plain text application, such as iOS's *Notes* or Google's *Keep* app. 
+**Avitext** is a plain text file format specification for bird species observations in the [ABA region](http://listing.aba.org/descriptions/). It is designed to document checklists in the field as quickly as possible using a smartphone note-taking text application, such as iOS's *Notes* or Google's *Keep* app. 
 
 <div id='Assumed-Knowledge'/>
 ### Assumed Knowledge
@@ -49,7 +49,7 @@ If you're unfamiliar with banding codes, using the Avitext specification can be 
 This example is designed to help you get started right away, and contains all the basic features of the format.
 
 ```
-Hamilton--Cootes Paradise Sanctuary
+ONCA Cootes Paradise
 02-15-16 17:05 15 1.2km
 BCCH 1 6 2m "males singing"
 BLJA 5
@@ -71,14 +71,16 @@ EABL "not found"
 
 
 ```
-Hamilton--Cootes Paradise Sanctuary
+ONCA Cootes Paradise
 ```
 
-This is simply the name you wish to give to the location where you are observing. For importing to eBird, this is the hotspot or personal location name. 
+This is simply a code for your province/state and the the name you wish to give to the location where you are observing. For importing to eBird, this is the hotspot or personal location name. 
 
-If you do not type it exactly as the hotspot/personal location is named (including spaces and letter case), you will need to assign the name you give to it to be an alias for the actual hotspot during import process to eBird.
+`ONCA` in this case refers to the province of Ontario within Canada. Another example would be `NYUS` (New York, USA). Outside of the US or Canada, eBird has a list of "sub-nation" codes that can be used, which tend to be two-letter national code followed by a dash, then the sub-national 3-character code. See [State and Country Codes](http://help.ebird.org/customer/portal/articles/973915-uploading-data-to-ebird) on the eBird website to download a list of them. The parser will understand both styles of codes, for example, either `QCCA` or `CA-QC` for Québec, Canada -- if there's a dash, it should be country first.
 
-For example, if one were to instead label this as `Cootes` (which is easier to type), upon import eBird will ask you what hotspot to assign checklists with the location `Cootes` to, and it will remember in the future.
+For the exact location you do not type it exactly as the hotspot/personal location is named (including spaces and letter case), you will need to assign the name you give to it to be an alias for the actual hotspot during import process to eBird.
+
+For example, if one were to instead label this as `Cootes Paradise` (which is easier to type), upon import eBird will ask you what hotspot to assign checklists with the location `Cootes Paradise` to, and it will remember in the future that it refers to `Hamilton--Cootes Paradise Sanctuary`.
 
 <div id='DateTime'/>
 ### Line 2: Date, Time, Length, Distance
@@ -90,9 +92,9 @@ For example, if one were to instead label this as `Cootes` (which is easier to t
 
 This translates as follows: 
 
- - `02-12-16` as February 12, 2016 format MM-DD-YY. (`02-12` would also be acceptible, the parser will assume the current year -- though this can cause trouble during the new year when importing data from the December previous.)
+ - `02-12-16` as February 12, 2016 format MM-DD-YY. (`02-12` would also be acceptible, the parser will assume the current year -- though this can cause trouble during the new year when importing data from the months previous.)
  - `17:05` as 5:05pm in local time. This must be in 24-hour time.
- - `15` refers to 15 minutes of time observing. (optional; will post to eBird as "incidental" if not included)
+ - `15` refers to 15 minutes of time observing. (optional; will post to eBird as an "incidental" list if not included)
  - `1.2km` refers to distance covered. Add "k" or "km" for kilometres, without this it will be assumed as miles (optional; will post to eBird as "stationary" if not included. Cannot be added if time observing is not added.)
 
 <div id='Species'/>
@@ -165,8 +167,8 @@ This is best understood by using the example to explain:
 | ------- | :-------- | :---- |
 | `m`  | Male | An individual or group of males |
 | `f`  | Female | An individual or group of females |
-| `j`  | Juvenile | Still in nest or otherwise dependant on parent |
-| `i`  | Immature | Not yet in adult plumage, but independant |
+| `j`  | Juvenile | Still in first plumage *(See: ['juvenile' vs 'immature'](http://help.ebird.org/customer/portal/articles/1010509-what-is-the-difference-between-a-juvenile-and-an-immature-))* |
+| `i`  | Immature | Not yet a full adult |
 | `a`  | Adult | Only necessary if sex is unknown and needs to be differentiated with sub-adults|
 | `x`  | Check* | Used to denote occurrance where numbers unknown or not relevant to the observation. This `x` must be without any numerical prefix.
 
@@ -257,7 +259,7 @@ This will likely not happen often, but you may choose to denote that two birds a
 ### Advanced Example
 
 ```
-Hamilton--Cootes Paradise Sanctuary
+ONCA Cootes Paradise
 02-15-16 17:05 15 1.2k
 BCCH 1 6 mm males singing
 BLJA 5
@@ -322,7 +324,7 @@ Use an empty entry with just the braces to indicate unknown passerine species, w
 [ABDUxMALL] 1
 ```
 
-There are no real banding codes for hybrids, but you could make one up quickly using the brace notation. When you import to eBird, you would just be prompted to assign a taxonomy to the code `ABDUxMALL` in this example.
+There are no real banding codes for hybrids, but you could make one up quickly using the brace notation. When you import to eBird, you would just be prompted to assign a valid taxonomy to the code `ABDUxMALL` in this example.
 
 
 <div id='Limitations'/>
@@ -346,7 +348,7 @@ This means upon parsing it is important to review lists for any unusual species.
 
 #### Note-taking app features
 
-These days most note-taking apps also come with a lot of fancy things beyond just text -- draw pictures, upload photos, use fonts -- this specification doesn't support any of that, and is unlikely to ever be able to.
+These days most note-taking apps also come with a lot of fancy things beyond just text -- draw pictures, upload photos, use fonts -- this specification doesn't support any of that, and is unlikely to ever be able to. This specification relies on the simplicity of plain text.
 
 <div id='Roadmap'/>
 ## Roadmap
@@ -363,7 +365,8 @@ For the purposes of this table, **lines** are the line number of the text file s
 
 | Line  | Position  | Format | Description |
 |:--:|:--:|---|:---|
-|  1 | 0 | `String`  | The hotspot or personal location name|
+|  1 | 0 | `String`  | The state/provincial or sub-national code|
+|  1 | 1 | `String`  | The hotspot or personal location name|
 | 2 | 0 | `String`  | The date & time in ISO8601 `MM-DD-YY hh:mm` format|
 | 2 | 1 | `Number`  | (optional) The number of minutes since the date in position 0|
 | 2 | 2 | `Decimal`  | (optional) The number of miles distance covered. Append `km` to indicate kilometres|
