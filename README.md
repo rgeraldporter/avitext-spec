@@ -1,6 +1,6 @@
 # Avitext: A Standard Shorthand Text Notation Specification for Bird Species Observations
 
-##### Version 1.0.0 DRAFT Specification
+##### Version 1.0.0 Specification
 
 *by Robert Gerald Porter*
 
@@ -390,5 +390,6 @@ In short, this means any checklist created with the specification version 1.0.0 
 
 <div id='Version-History'/>
 ### Version History
- * October 2016: v1.0.0 is published
+ * October 2016: v1.0.0 is published as a draft.
+ * December 2016: v1.0.0 has "draft" status removed, [parsing app](https://github.com/rgeraldporter/avitext-to-ebird) is made available.
 
