@@ -78,7 +78,7 @@ This is simply a code for your province/state and the the name you wish to give 
 
 `ONCA` in this case refers to the province of Ontario within Canada. Another example would be `NYUS` (New York, USA). Outside of the US or Canada, eBird has a list of "sub-nation" codes that can be used, which tend to be two-letter national code followed by a dash, then the sub-national 3-character code. See [State and Country Codes](http://help.ebird.org/customer/portal/articles/973915-uploading-data-to-ebird) on the eBird website to download a list of them. The parser will understand both styles of codes, for example, either `QCCA` or `CA-QC` for Québec, Canada -- if there's a dash, it should be country first.
 
-For the exact location you do not type it exactly as the hotspot/personal location is named (including spaces and letter case), you will need to assign the name you give to it to be an alias for the actual hotspot during import process to eBird.
+For the exact location if you do not type it exactly as the hotspot/personal location is named (including spaces and letter case), you will need to assign the name you give to it to be an alias for the actual hotspot during import process to eBird.
 
 For example, if one were to instead label this as `Cootes Paradise` (which is easier to type), upon import eBird will ask you what hotspot to assign checklists with the location `Cootes Paradise` to, and it will remember in the future that it refers to `Hamilton--Cootes Paradise Sanctuary`.
 
