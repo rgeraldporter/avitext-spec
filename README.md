@@ -62,7 +62,7 @@ CEDW 160 "min count, largest flock I've seen since 2013"
 RBGU 150 "large flock on ice, est"
 CAGO 227 25 305 "flyovers headed west, exact"
 BLJA 1
-PIWA x "newly excavated nesting cavity found"
+PIWO x "newly excavated nesting cavity found"
 EABL "not found"
 ```
 
