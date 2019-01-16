@@ -7,11 +7,11 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 ## Table of Contents
-1. [Introduction](#Introduction)
-	+ [Assumed Knowledge](#Assumed-Knowledge)
-	+ [Process](#Process)
-- [Basic Avitext Notation](#Basic-Avitext-Notation)
-	+ [Location](#Location)
+1. [Introduction](#introduction)
+	+ [Assumed Knowledge](#assumed-knowledge)
+	+ [Process](#checklist-process)
+- [Basic Avitext Notation](#basic-avitext-notation)
+	+ [Location](#line-1-location-name)
 	+ [Date, Time, Length, Distance](#DateTime)
 	+ [Species Observed](#Species)
 	+ [Valid Short Codes](#Valid-Short-Count-Codes)
@@ -24,28 +24,27 @@
 - [Version](#Version)
 	+ [Version History](#Version-History)
 
-<div id='Introduction'/>
+
 ## Introduction
 
 **Avitext** is a plain text file format specification for bird species observations in the [ABA region](http://listing.aba.org/descriptions/). It is designed to document checklists in the field as quickly as possible using a smartphone note-taking text application, such as iOS's *Notes* or Google's *Keep* app. 
 
-<div id='Assumed-Knowledge'/>
 ### Assumed Knowledge
 
 To use this shorthand, you will need to know the standard avian [banding codes](http://help.ebird.org/customer/portal/articles/1987817-using-ebird-four-letter-codes?t=433603). If you do not know them already, they are reletively easy to learn. Most follow a predictable pattern so long as you are aware of the full species name, though a few have special rules. 
 
 If you're unfamiliar with banding codes, using the Avitext specification can be a great way of learning banding codes quickly.
 
-<div id='Process'/>
 ### Checklist Process
+
  1. Write checklists, usually while in the field
  - Paste them into a parser
  - Generate a .csv file from the parser
  - Import .csv file to eBird
  - See your checklists on eBird!
 
-<div id='Basic-Avitext-Notation'/>
 ## Basic Avitext Notation
+
 This example is designed to help you get started right away, and contains all the basic features of the format.
 
 ```
@@ -66,9 +65,7 @@ PIWO x "newly excavated nesting cavity found"
 EABL "not found"
 ```
 
-<div id='Location'/>
 ### Line 1: Location Name
-
 
 ```
 ONCA Cootes Paradise
