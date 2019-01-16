@@ -12,8 +12,8 @@
 	+ [Process](#checklist-process)
 - [Basic Avitext Notation](#basic-avitext-notation)
 	+ [Location](#line-1-location-name)
-	+ [Date, Time, Length, Distance](#DateTime)
-	+ [Species Observed](#Species)
+	+ [Date, Time, Length, Distance](#line-2-date-time-length-distance)
+	+ [Species Observed](#lines-3-observed-species-line)
 	+ [Valid Short Codes](#Valid-Short-Count-Codes)
 - [Benefits Over Other Methods](#Benefits-Over-Other-Methods)
 - [Advanced Avitext Notation](#Advanced-Avitext-Notation)
@@ -79,9 +79,7 @@ For the exact location, if you do not type it exactly as the hotspot/personal lo
 
 For example, if one were to instead label this as `Cootes Paradise` (which is easier to type), upon import eBird will ask you what hotspot to assign checklists with the location `Cootes Paradise` to, and it will remember in the future that it refers to `Hamilton--Cootes Paradise Sanctuary`.
 
-<div id='DateTime'/>
 ### Line 2: Date, Time, Length, Distance
-
 
 ```
 02-12-16 17:05 15 1.2km
@@ -94,7 +92,6 @@ This translates as follows:
  - `15` refers to 15 minutes of time observing. (optional; will post to eBird as an "incidental" list if not included)
  - `1.2km` refers to distance covered. Add "k" or "km" for kilometres, without this it will be assumed as miles (optional; will post to eBird as "stationary" if not included. Cannot be added if time observing is not added.)
 
-<div id='Species'/>
 ### Lines 3+: Observed Species Lines
 
 These lines follow the format of noting first the species in a 4-character banding code, followed by a space, and then as many comments or counts of individuals as necessary (each seperated by a space).
