@@ -13,7 +13,7 @@
 - [Basic Avitext Notation](#basic-avitext-notation)
 	+ [Location](#line-1-location-name)
 	+ [Date, Time, Length, Distance](#line-2-date-time-length-distance)
-	+ [Species Observed](#lines-3-observed-species-line)
+	+ [Species Observed](#lines-3-observed-species-lines)
 	+ [Valid Short Codes](#Valid-Short-Count-Codes)
 - [Benefits Over Other Methods](#Benefits-Over-Other-Methods)
 - [Advanced Avitext Notation](#Advanced-Avitext-Notation)
